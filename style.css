@@ -1,0 +1,89 @@
+.countdownHolder{
+    width:600px;
+    height: 400px;
+    font: 40px/1.5 'Open Sans Condensed',sans-serif;
+    letter-spacing:-3px;
+    background: url("https://srcc.oboi.ws/wallpapers/big_3140_oboi_temno-seryj_fon.jpg") no-repeat;
+    background-size: cover;
+    display: flex;
+    align-content: center;
+    flex-wrap: wrap;
+}
+
+.wrap {
+    height: 2em;
+}
+
+.wrap2{
+    height: 2em;
+    width: 800px;
+    font: 16px 'Open Sans Condensed',sans-serif;
+    color:#fff;
+}
+
+.wrap2 .title {
+    margin: 30px;
+    letter-spacing:0.5px;
+}
+
+.title:first-child {
+    margin-left: 70px;
+}
+
+.title:last-child {
+    margin: 5px;
+}
+
+.title:nth-child(3) {
+    margin-left: 20px;
+}
+
+.position{
+    display: inline-block;
+    height: 1.6em;
+    overflow: hidden;
+    position: relative;
+    width: 2.1em;
+}
+
+.digit{
+    display:block;
+    background-color:#444;
+    border-radius:0.2em;
+    text-align:center;
+    color:#fff;
+    letter-spacing:5px;
+}
+
+.digit.static{
+    box-shadow:1px 1px 1px rgba(4, 4, 4, 0.35);
+}
+
+.countDays{
+    margin-left: 50px;
+}
+
+.countDiv{
+    display:inline-block;
+    width:16px;
+    height:1.6em;
+    position:relative;
+}
+
+.countDiv:before,
+.countDiv:after{
+    position:absolute;
+    width:5px;
+    height:5px;
+    background-color:#dfdada;
+    border-radius:50%;
+    left:50%;
+    margin-left:-3px;
+    top:0.5em;
+    box-shadow:1px 1px 1px rgba(4, 4, 4, 0.5);
+    content:'';
+}
+
+.countDiv:after{
+    top:0.9em;
+}
