@@ -1,5 +1,5 @@
 function getTimeLeft() {
-    var timeLeft = getDifferentDate();
+    var timeLeft = getTimeTillFinish();
     var seconds = Math.floor( (timeLeft/1000) % 60 );
     var minutes = Math.floor( (timeLeft/1000/60) % 60 );
     var hours = Math.floor( (timeLeft/(1000*60*60)) % 24 );
@@ -12,7 +12,7 @@ function getTimeLeft() {
     }
 }
 
-function getDifferentDate() {
+function getTimeTillFinish() {
     var deadLine = moment('2016-12-31 23:59:59', 'YYYY-MM-DD-hh-mm-ss');
     var nowDate  = new Date();
     var timeLeft = deadLine > nowDate ? Math.ceil((deadLine - nowDate)) : null;
@@ -29,10 +29,6 @@ function format(dig) {
     return result;
 }
 
-function setTimeLeft() {
-
-}
-
 init();
 
 function init() {
@@ -43,7 +39,7 @@ function init() {
             var value = format(timeObj[key]);
             span[0].innerText = value;
         }
-        if (getDifferentDate <= 0) {
+        if (getTimeTillFinish <= 0) {
             clearInterval(interval);
         }
     }, 1000)
